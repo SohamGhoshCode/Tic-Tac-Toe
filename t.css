@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("Tic.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-color: #548687;
+    text-align: center;
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    font-size: 13vmin;
+    color: #b0413e;
+    background-color: aliceblue;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.box:hover{
+    background-color: rgb(134, 163, 134);
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+}
+#re{
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+}
+#re:hover{
+    background-color: bisque;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+}
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+}
+#new-btn:hover{
+    background-color: bisque;
+}
+#msg{
+    height: 80vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(40, 28, 7);
+    font-size: 6vmin;
+}
+.hide{
+    display: none;
+}
+.msg-container {
+    display: none;
+    font-size: 2rem;
+    color: #350606;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
+    opacity: 0;
+    white-space: nowrap;
+    transform: translateY(-30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.msg-container.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.msg-container.show {
+    animation: fadeInScale 2s ease-out forwards;
+}
